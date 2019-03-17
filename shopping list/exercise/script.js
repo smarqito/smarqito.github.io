@@ -14,6 +14,7 @@ function createListElement() {
 	ul.appendChild(li);
 	var liNewButton = document.createElement("button");
 	liNewButton.setAttribute("name", "liDelete");
+	liNewButton.setAttribute("class", "deleteButton");
 	liNewButton.appendChild(document.createTextNode("Delete"));
 	li.appendChild(liNewButton);
 	checkClick()
@@ -36,9 +37,17 @@ function liClick() {
 	this.classList.toggle("done");
 }
 
-button.addEventListener("click", addListAfterClick);
+function _eventListener(place, listener, _function) {
+	place.addEventListener(listener, _function);
+}
 
-input.addEventListener("keypress", addListAfterKeypress);
+_eventListener(button, "click", addListAfterClick);
+
+_eventListener(input, "keypress", addListAfterKeypress);
+
+// button.addEventListener("click", addListAfterClick);
+
+// input.addEventListener("keypress", addListAfterKeypress);
 
 function checkClick() {
 	for (var d = 0; d < buttonDelete.length; d++) {

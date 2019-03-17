@@ -21,3 +21,15 @@
 .done {
   text-decoration: line-through;
 }
+
+.deleteButton {
+  margin-left: 10px;
+}
+
+ul > li {
+  padding: 5px 0px 5px 0px;
+}
+
+ul > li:hover, ul > li > button {
+  cursor: pointer;
+}
