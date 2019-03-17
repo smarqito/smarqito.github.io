@@ -62,5 +62,5 @@ window.onload = function() {
 	checkClick();
 }
 function liDelete() {
-	console.log(this.parentElement.parentElement.removeChild(this.parentElement));
+	this.parentElement.parentElement.removeChild(this.parentElement);
 }
